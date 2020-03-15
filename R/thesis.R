@@ -54,13 +54,14 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...){
 thesis_gitbook <- function(before_pre = '<li><a href="./">',
                            head = "",
                            before_suf = '</a></li>',
+                           before = '<li><a href="./">DUMMY</a></li>',
                            after = '<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>',
                            ...){
 
   base <- bookdown::gitbook(
     split_by = "chapter+number",
     config = list(toc = list(collapse = "section",
-      before = paste(c(before_pre, head, before_suf), sep = ''),
+      before = before,
       after = after,
       ...)
     )
