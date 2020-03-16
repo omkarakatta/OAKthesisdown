@@ -43,6 +43,8 @@ thesis_pdf <- function(toc = TRUE, toc_depth = 3, highlight = "default", ...){
 #' This is a function called in output in the YAML of the driver Rmd file
 #' to specify the creation of a webpage version of the thesis.
 #'
+#' @param before string of html code for the sidebar header
+#' @param after string of html code for the sidebar footer
 #' @param ... Further arguments passed to or from other methods.
 #'
 #' @export
